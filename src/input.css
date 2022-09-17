@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+@layer base {
+  a {
+    @apply py-9 text-Darkgrayishblue border-b-4 border-b-transparent transition-all duration-300 hover:border-b-Orange hover:text-black;
+  }
+}
+
+/* Style Active Image */
+/* Border */
+.active {
+  position: relative;
+}
+
+.active > img {
+  border: 3px solid hsl(26, 100%, 55%);
+}
+
+/* Overlay */
+.active::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(25, 100%, 94%, 0.607);
+  z-index: 4;
+}
+
+/* Cart Section */
+
+.cart > div {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart:hover > div {
+  display: flex;
+}
